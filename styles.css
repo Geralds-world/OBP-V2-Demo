@@ -76,7 +76,7 @@ body {
     padding-left: 15px;
 }
 
-
+/* animal css */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -115,6 +115,18 @@ body {
     opacity: 1;
 }
 
+.grid-item:hover .text .category {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 5px;
+    transform: translateY(0);
+}
+
+.grid-item:hover .heading1 {
+    opacity: 0;
+}
+
 .text {
     color: white;
     text-align: center;
@@ -137,6 +149,30 @@ body {
 .text .product {
     font-size: 1em;
 }
+
+.text .animal,
+.text .product {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.grid-item:hover .text .animal,
+.grid-item:hover .text .product {
+    opacity: 1;
+}
+
+.heading1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(4, 159, 231, 0.8);
+    color: white;
+    padding: 5px 10px;
+    z-index: 1;
+    font-size: 1.2em;
+    transition: opacity 0.5s;
+}
+
 
 
 .advice-section {
