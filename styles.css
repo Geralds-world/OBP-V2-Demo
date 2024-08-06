@@ -5,9 +5,8 @@
     border-bottom: 3px solid #8fa63c;
 }
 
-h2 {
-    font-family: 'Lora', serif;
-
+body, h2 {
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -82,7 +81,6 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    
 }
 
 .grid-item {
@@ -97,47 +95,25 @@ body {
     display: block;
 }
 
-.overlay {
+.heading1 {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.grid-item:hover .overlay {
-    opacity: 1;
-}
-
-.grid-item:hover .text .category {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin-bottom: 5px;
-    transform: translateY(0);
-}
-
-.grid-item:hover .heading1 {
-    opacity: 0;
+    top: 10px;
+    left: 10px;
+    background: #3b6d85;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    z-index: 1;
 }
 
 .text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(86, 84, 84, 0.5);
     color: white;
-    text-align: center;
-}
-
-.text .category {
-    font-size: 1.2em;
-    background: #3b6d85;
     padding: 5px 10px;
-    margin-bottom: 5px;
-    display: inline-block;
+    z-index: 1;
 }
 
 .text .animal {
@@ -148,29 +124,6 @@ body {
 
 .text .product {
     font-size: 1em;
-}
-
-.text .animal,
-.text .product {
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.grid-item:hover .text .animal,
-.grid-item:hover .text .product {
-    opacity: 1;
-}
-
-.heading1 {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(4, 159, 231, 0.8);
-    color: white;
-    padding: 5px 10px;
-    z-index: 1;
-    font-size: 1.2em;
-    transition: opacity 0.5s;
 }
 
 
@@ -307,3 +260,92 @@ body {
             width: 50%;
             background-color: #f3f7f2;
         }       
+
+
+.card {
+    background-color: #2a567d;
+    color: white;
+    border: none;
+    border-radius: 0;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #8fa63c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
+
+.company-focus-title {
+    color: #2a567d;
+}
+
+.blue-line {
+    width: 50px;
+    height: 4px;
+    background-color: #2a567d;
+    margin-bottom: 20px;
+}
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) {
+    .img-fluid {
+        height: 250px;
+        object-fit: cover;
+    }
+}
+
+.hover-effect {
+    transition: transform 0.4s ease-out;
+    box-shadow: 2px 2px 4px #3b6d85;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 30px #3b6d85;
+}
+
+.icon-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.6s ease-in-out;
+}
+
+.card:hover .svg-icon {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: none;
+}
+
+.svg-icon {
+    background-color: #8fa63c;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #8fa63c;
+}
